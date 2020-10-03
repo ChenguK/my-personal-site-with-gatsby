@@ -6,5 +6,19 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  siteMetadata: {
+    title: `ChenguJS Personal Website`,
+    author: `Chengu Kargbo`,
+  },
+  plugins: [
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`,
+      },
+    },
+    `gatsby-transformer-remark`,
+    `gatsby-plugin-sass`,
+  ],
 }
